@@ -18,10 +18,10 @@ def build(main, version):
 def make_xml(
   main, versions=VERSIONS,
   info_xml='info.xml', out_xml='out.xml',
-  indent=4, tag='code',
+  indent=4, tag='code', encoding='utf8',
 ):
   if type(indent) == int: indent = ' '*indent
-  with open(out_xml, 'w') as fw:
+  with open(out_xml, 'w', encoding=encoding) as fw:
     def write_sources(indent_src):
       for ver in versions:
         print(f'{indent_src}<source version="{ver}">', file=fw)
@@ -29,7 +29,7 @@ def make_xml(
         print(f'{indent_src}</source>', file=fw)
     if info_xml is not None and os.path.isfile(info_xml):
       found_tag = False
-      with open(info_xml) as f:
+      with open(info_xml, encoding=encoding) as f:
         for line in f:
           m = re.search(r'^(\s*)</(\S+)\s*>', line)
           if m is not None:
