@@ -1,0 +1,17 @@
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2023 sup39
+
+class Button():
+  START = 0x1000
+  S = 0x1000
+  Y = 0x0800
+  X = 0x0400
+  B = 0x0200
+  A = 0x0100
+  L = 0x0040
+  R = 0x0020
+  Z = 0x0010
+  DU = 0x0008
+  DD = 0x0004
+  DR = 0x0002
+  DL = 0x0001
