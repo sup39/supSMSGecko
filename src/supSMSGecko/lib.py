@@ -17,7 +17,7 @@ def build(main, version):
 
 def make_xml(
   main, versions=VERSIONS,
-  info_xml='info.xml', out_xml='out.xml',
+  info_xml='info.xml', out_xml='@code.xml',
   indent=4, tag='code', encoding='utf8',
 ):
   if type(indent) == int: indent = ' '*indent
