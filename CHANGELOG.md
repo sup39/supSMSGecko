@@ -1,4 +1,7 @@
 # Changelog
+## v0.1.0a5
+- Updated symbols.py and ldscript/\*.ld to include symbols with the same name
+- Change `::` to `_` in symbols.py to match with ldscript/\*.ld
 ## v0.1.0a4
 - Fixed setup.cfg to include ldscript/
 ## v0.1.0a3

@@ -6,13 +6,15 @@ A tool to make Gecko codes for Super Mario Sunshine.
 pip install supSMSGecko
 ```
 
+You also need [devkitPro](https://github.com/devkitPro/installer/releases) if you want to make C0/C2 codes.
+
 ## Example
 ```python
 from supSMSGecko import make_xml, symbols, Button as B
 
 def main(g, ver):
   S = symbols[ver]
-  addr_inst = 0x26 + S['TMarDirector::direct']
+  addr_inst = 0x26 + S['TMarDirector_direct']
   addr_input = S['mPadStatus']
   # code
   g.write16(addr_inst, 600)
